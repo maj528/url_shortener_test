@@ -22,7 +22,9 @@ class UrlsController < ApplicationController
       redirect_to @url.sanitize
     end
     private
+
     def url_params
-      params.require(:url).permit(:name,:long_url,:user_id, :category_id)
+      params.require(:url).permit(:name,:long_url,:user_id, :user_id)
     end
   end
+end

@@ -1,8 +1,10 @@
-<h1>New URL</h1>
+<h1 style='color:white'><strong>GAPF!SH URL SHORTENER</strong></h1>
 <%= flash[:error] %>
 <%= form_with model: @url do |form| %>
 
-  <p>Please input url you want to shorten: <%= form.text_field :long_url %></p>
+<%= form.text_field :long_url %>
 
   <%= form.submit %>
 <% end %>
+
+<br><br><%= link_to image_tag ("Majid_Sticker.png") %>

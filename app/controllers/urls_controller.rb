@@ -12,11 +12,9 @@ class UrlsController < ApplicationController
       @url = Url.new(url_params)
       @url.short_url =@url.generate_short_url
       @url.long_url = @url.sanitize
-      p @url
       if @url.save
         redirect_to urls_path
       else
-        p "nope"
         flash[:error] = @url.errors.full_messages
         redirect_to new_url_path
       end
@@ -24,6 +22,7 @@ class UrlsController < ApplicationController
 
     def show
       @url = Url.find_by(short_url: params[:short_url])
+      redirect_to(@url.long_url)
     end
 
     private

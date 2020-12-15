@@ -3,7 +3,7 @@
 <% @urls.each do |url| %> 
     <ul style='list-style: none' class='text-left';>
       <li>
-      <span><strong><%= link_to 'https://localhost:3000/' + url.short_url, url.short_url %></strong></span>
+      <span><strong><%= link_to 'https://url-shortener-gapfish.herokuapp.com/' + url.short_url, url.short_url %></strong></span>
       <p style='color:white;font-weight:200'><%= url.long_url %></p>
       </li>
     </ul>

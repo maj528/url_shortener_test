@@ -6,7 +6,10 @@ In this challenge, I focused on creating a simple, clean, and scalable URL short
 ## How to run
 Locally: 
 ```bash 
-rails db:migrate
+bundle install
+rake db:create
+rake db:migrate
+rails s
 ```
 Then, open [http://localhost:3000/](http://localhost:3000/) and enter your long URL to be shortened. The shortened versions as well as the original URLs are displayed and linked.
 
